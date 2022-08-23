@@ -12,38 +12,82 @@
 }
 
 #welcome-section {
+  /* border: 2px solid blue; */
   background-color: var(--bgDark);
   color: var(--primary);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   align-items: center;
   justify-content: center;
 }
 
-nav {
-  background-color: #c5cae9;
-  height: 50px;
-  width: 100%;
+.navbar {
+  background-color: #333;
   position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  color: black;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: var(--white);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: var(--primary);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
-nav a {
-  font-size: 20px;
-  margin: 2%;
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
-nav a:hover {
-  color: hsl(160, 100%, 90%);
+
+.dropdown-content a:hover {
+  background-color: #ddd;
 }
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 main section {
   margin: 20px 10% 20px 10%;
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-template: repeat(1, 1fr) / repeat(3, 1fr);
   grid-column-gap: 10px;
   justify-items: center;
 }
@@ -60,24 +104,58 @@ main {
   padding-top: 120px;
   display: flex;
   flex-direction: column;
-  border: 2px solid red;
+
+  /* border: 2px solid red; */
 }
 
 #main h1 {
   text-align: center;
   color: var(--secondary);
 }
-main button {
-  text-align: center;
-  border-radius: 5px;
-  border-color: #03a9f4;
-  cursor: pointer;
-  box-shadow: none;
-  width: auto;
+
+.btn {
   align-self: center;
-  padding: 5px 10px 5px 10px;
-  margin-bottom: 20px;
+  align-content: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-color: var(--primary);
 }
+
+.btn:hover {
+  background: transparent;
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+/* button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+button:hover {
+  background-color: var(--primary);
+  color: var(--bgDark);
+} */
+
 main a,
 main a:hover,
 main a:active,
@@ -95,7 +173,7 @@ a:hover,
 a:active,
 a:focus,
 a:visited {
-  color: black;
+  /* color: black; */
   text-decoration: none;
 }
 main section div a img {

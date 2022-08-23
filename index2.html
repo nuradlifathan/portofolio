@@ -7,14 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADLI'S PORTOFOLIO</title>
     <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <nav id="navbar">
+    <div class="navbar">
         <a href="#">HOME</a>
-        <a href="#">PROJECTS</a>
-        <a href="#">CONTACT</a>
-    </nav>
+        <a href="#">ABOUT</a>
+        <a href="#">PROJECT</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">MORE
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Fundamental</a>
+                <a href="#">Front-End</a>
+                <a href="#">Back-End</a>
+            </div>
+        </div>
+    </div>
 
     <header id="welcome-section">
         <h1>HI, I'M ADLI</h1>
@@ -50,9 +62,9 @@
                 <h4>Project 6</h4>
             </div>
         </section>
-        <button><a href="#" target="_blank">More Projects >></a></button>
+        <button class="btn">More Projects >> </button>
     </main>
-
+    <br>
     <footer id="footer">
         <div>
             <a id="profile-link" href="#" target="_blank"><img src="./assets2/fb.png" width="150px"></a>
